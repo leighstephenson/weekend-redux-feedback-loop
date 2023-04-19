@@ -2,7 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
-
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 function Feeling() {
     const dispatch = useDispatch();
@@ -32,6 +32,7 @@ function Feeling() {
     return (
 
         <>
+            <ProgressBar currentStep={0} />
             <Typography>
                 <p> How you feelin'?</p>
             </Typography>
