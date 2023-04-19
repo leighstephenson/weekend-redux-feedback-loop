@@ -26,6 +26,7 @@ function Feeling() {
 
 
     //! What Displays
+    //feeling > understanding > support > comments > review
     //TODO add conditional to keep rating between 1-10. Maybe add a conditional
     //TODO to the submit to change a color if rating is < 1 or > 10
 
