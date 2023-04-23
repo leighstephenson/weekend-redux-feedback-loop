@@ -45,7 +45,7 @@ function Review() {
                     <p>Understanding: {understandingRating} </p>
                     <p> Support: {supportRating} </p>
                     <p> Comments: {additionalComments} </p>
-                    <input type="submit" value="SUBMIT" />
+                    <Button type="submit">  SUBMIT </Button>
 
                 </form>
             </Card>

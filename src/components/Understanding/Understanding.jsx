@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import Button from '@mui/material/Button';
 
 function Understanding() {
     const dispatch = useDispatch();
@@ -11,13 +12,14 @@ function Understanding() {
 
     //! Handle change
     const handleChange = (event) => {
+        event.preventDefault();
         const action = { type: "SET_UNDERSTANDING", payload: event.target.value };
         dispatch(action);
     };
 
     //! Next Step
     const nextStep = () => {
-        if (understandingRating === '') {
+        if (understandingRating === '0') {
             alert('Please enter a rating');
         } else {
             history.push('/support')
@@ -31,7 +33,7 @@ function Understanding() {
         <>
             <ProgressBar currentStep={1} />
             <Typography>
-                <p> Rate your understanding.</p>
+                Rate your understanding.
             </Typography>
 
             <Card>
@@ -40,8 +42,8 @@ function Understanding() {
                         value={understandingRating}
                         onChange={handleChange}
                         type="number" />
-                    <input type="submit" value="Next" />
 
+                    <Button type="submit">  Next </Button>
                 </form>
             </Card>
 

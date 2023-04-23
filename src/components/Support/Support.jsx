@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import Button from '@mui/material/Button';
+
 
 function Support() {
     const dispatch = useDispatch();
@@ -11,6 +13,7 @@ function Support() {
 
     //! Handle change
     const handleChange = (event) => {
+        event.preventDefault();
         const action = { type: "SET_SUPPORT", payload: event.target.value };
         dispatch(action);
     };
@@ -32,7 +35,7 @@ function Support() {
         <>
             <ProgressBar currentStep={2} />
             <Typography>
-                <p> How well are you being supported? </p>
+                How well are you being supported? 
             </Typography>
 
             <Card>
@@ -41,7 +44,7 @@ function Support() {
                         value={supportRating}
                         onChange={handleChange}
                         type="number" />
-                    <input type="submit" value="Next" />
+                    <Button type="submit">  Next </Button>
 
                 </form>
             </Card>

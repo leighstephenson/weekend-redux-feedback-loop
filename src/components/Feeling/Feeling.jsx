@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import Button from '@mui/material/Button';
+
 
 function Feeling() {
     const dispatch = useDispatch();
@@ -11,6 +13,7 @@ function Feeling() {
 
     //! Handle change
     const handleChange = (event) => {
+        event.preventDefault();
         const action = { type: "SET_FEELING", payload: event.target.value };
         dispatch(action);
     };
@@ -35,7 +38,7 @@ function Feeling() {
         <>
             <ProgressBar currentStep={0} />
             <Typography>
-                <p> How you feelin'?</p>
+                 How you feelin'?
             </Typography>
 
             <Card>
@@ -44,7 +47,7 @@ function Feeling() {
                         value={feelingRating}
                         onChange={handleChange}
                         type="number" />
-                    <input type="submit" value="Next" />
+                    <Button type="submit">  Next </Button>
 
                 </form>
             </Card>

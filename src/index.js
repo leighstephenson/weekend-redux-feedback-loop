@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 //feeling - understanding - support - comments > review
 
-const feeling = (state = '0', action) => {
+const feeling = (state = '', action) => {
     if (action.type === 'SET_FEELING') {
         //changes the value of reducer
         return action.payload;
@@ -18,7 +18,7 @@ const feeling = (state = '0', action) => {
     return state
 };
 
-const understanding = (state = 0, action) => {
+const understanding = (state = '', action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
     } else if (action.type === 'CLEAR_FORM') {
@@ -27,7 +27,7 @@ const understanding = (state = 0, action) => {
     return state
 };
 
-const support = (state = 0, action) => {
+const support = (state = '', action) => {
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
     } else if (action.type === 'CLEAR_FORM') {

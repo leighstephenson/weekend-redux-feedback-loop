@@ -24,10 +24,10 @@ Now that the server is running, open a new terminal tab with `cmd + t` and start
 ✅ installed redux
 ✅ installed MUI 
 
-Create a multi-part form that allows users to leave feedback for today. 
+✅ Create a multi-part form that allows users to leave feedback for today. 
 There will be 4 views for the form parts.
 
-The parts:
+✅ The parts:
 - How are you feeling today?
 ![feeling](wireframes/feeling.png)
 - How well are you understanding the content?
@@ -37,7 +37,7 @@ The parts:
 - Any comments you want to leave?
 ![comments](wireframes/comments.png)
 
-While there is no nav bar, each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
+✅ While there is no nav bar, each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
 
 ### Input Validation
 

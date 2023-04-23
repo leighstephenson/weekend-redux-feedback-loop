@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import Button from '@mui/material/Button';
+
 
 function Comments() {
     const dispatch = useDispatch();
@@ -11,6 +13,7 @@ function Comments() {
 
     //! Handle change
     const handleChange = (event) => {
+        event.preventDefault();
         const action = { type: "SET_COMMENTS", payload: event.target.value };
         dispatch(action);
     };
@@ -31,7 +34,7 @@ function Comments() {
         <>
             <ProgressBar currentStep={4} />
             <Typography>
-                <p> Do you have any additional comments?</p>
+                Do you have any additional comments?
             </Typography>
 
             <Card>
