@@ -1,11 +1,10 @@
-//TODO imports here
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Button from '@mui/material/Button';
-
+import { Check } from '@mui/icons-material';
 
 function Review() {
     const history = useHistory()
@@ -15,7 +14,6 @@ function Review() {
     const additionalComments = useSelector(store => store.comments);
 
 
-//TODO need to build the success page and route on App
     //! Submit feedback
     const submit = () => {
         axios.post('/feedback', {
@@ -37,18 +35,38 @@ function Review() {
 
         <>
             <ProgressBar currentStep={5} />
-            <Typography>
+
+            <br />
+
+            <Typography variant="h5">
                 Review your answers.
             </Typography>
 
-            <Card>
+            <Card sx={{
+                display: 'block',
+                justifyContent: 'center',
+                margin: 5,
+                padding: 5,
+                boxShadow: 9,
+
+            }}>
+
                 <form onSubmit={submit}>
                     <p>Feeling: {feelingRating} </p>
                     <p>Understanding: {understandingRating} </p>
                     <p> Support: {supportRating} </p>
                     <p> Comments: {additionalComments} </p>
-                    <Button type="submit">  SUBMIT </Button>
 
+                    <br />
+                    <Button type="submit"
+                        variant="contained"
+                        endIcon={<Check />}
+                        sx={{':hover': {
+                            bgcolor: 'secondary.main',
+                        },
+                    }}
+                    >
+                        SUBMIT </Button>
                 </form>
             </Card>
         </>

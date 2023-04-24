@@ -3,11 +3,12 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #148896;
   min-height: 70px;
   padding: 20px;
   color: white;
   margin-bottom: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .App-title {
@@ -20,4 +21,8 @@
 
 h4 {
   font-style: italic;
+}
+
+button {
+  color: aqua;
 }

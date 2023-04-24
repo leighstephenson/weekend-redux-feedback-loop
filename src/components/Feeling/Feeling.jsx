@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Button from '@mui/material/Button';
+import ArrowRight from '@mui/icons-material/ArrowRight'
+
 
 
 function Feeling() {
@@ -20,7 +22,7 @@ function Feeling() {
 
     //! Next Step
     const nextStep = () => {
-        if ( feelingRating < 1 || feelingRating === ''  || feelingRating > 10) {
+        if (feelingRating < 1 || feelingRating === '' || feelingRating > 10) {
             alert('Please enter a rating between 1 and 10');
         } else {
             history.push('/understanding')
@@ -30,26 +32,50 @@ function Feeling() {
 
     //! What Displays
     //feeling > understanding > support > comments > review
-    //TODO add conditional to keep rating between 1-10. Maybe add a conditional
-    //TODO to the submit to change a color if rating is < 1 or > 10
 
     return (
 
         <>
             <ProgressBar currentStep={0} />
-            <Typography>
-                 How you feelin'?
-            </Typography>
 
-            <Card>
+
+            <Card sx={{
+                display: 'block',
+                justifyContent: 'center',
+                margin: 5,
+                padding: 5,
+                boxShadow: 9,
+
+            }}>
+
+                <Typography variant="h5">
+                    How you feelin'?
+                </Typography>
+
                 <form onSubmit={nextStep}>
+                    <br />
+                    <br />
+
                     <input id="rating"
                         value={feelingRating}
                         onChange={handleChange}
-                        type="number" 
+                        type="number"
                         placeholder="1-10"
-                        />
-                    <Button type="submit">  Next </Button>
+                    />
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <Button type="submit"
+                        variant="contained"
+                        endIcon={<ArrowRight />}
+                        sx={{':hover': {
+                            bgcolor: 'secondary.main',
+                        },
+                    }}
+                    >
+                        Next </Button>
 
                 </form>
             </Card>
