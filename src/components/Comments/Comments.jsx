@@ -20,11 +20,7 @@ function Comments() {
 
     //! Next Step
     const nextStep = () => {
-        if (additionalComments === '') {
-            alert('Please enter a rating');
-        } else {
-            history.push('/review')
-        };
+      history.push('/review')
     };
 
     //! What displays 
@@ -42,8 +38,10 @@ function Comments() {
                     <input id="rating"
                         value={additionalComments}
                         onChange={handleChange}
-                        type="text" />
-                    <input type="submit" value="Next" />
+                        type="text"
+                        placeholder="Optional"
+                        />
+                    <Button type="submit">  Next </Button>
 
                 </form>
             </Card>

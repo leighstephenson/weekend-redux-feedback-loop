@@ -19,10 +19,9 @@ function Support() {
     };
 
     //! Next Step
-    //TODO add onto conditionals on all components!
     const nextStep = () => {
-        if (supportRating === '') {
-            alert('Please enter a rating');
+        if (supportRating < 1 || supportRating === '' || supportRating > 10) {
+            alert('Please enter a rating between 1 and 10');
         } else {
             history.push('/comments')
         };
@@ -35,7 +34,7 @@ function Support() {
         <>
             <ProgressBar currentStep={2} />
             <Typography>
-                How well are you being supported? 
+                How well are you being supported?
             </Typography>
 
             <Card>
@@ -43,7 +42,9 @@ function Support() {
                     <input id="rating"
                         value={supportRating}
                         onChange={handleChange}
-                        type="number" />
+                        type="number"
+                        placeholder="1-10"
+                    />
                     <Button type="submit">  Next </Button>
 
                 </form>

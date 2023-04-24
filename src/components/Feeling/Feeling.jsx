@@ -20,8 +20,8 @@ function Feeling() {
 
     //! Next Step
     const nextStep = () => {
-        if (feelingRating === '') {
-            alert('Please enter a rating');
+        if ( feelingRating < 1 || feelingRating === ''  || feelingRating > 10) {
+            alert('Please enter a rating between 1 and 10');
         } else {
             history.push('/understanding')
         };
@@ -46,7 +46,9 @@ function Feeling() {
                     <input id="rating"
                         value={feelingRating}
                         onChange={handleChange}
-                        type="number" />
+                        type="number" 
+                        placeholder="1-10"
+                        />
                     <Button type="submit">  Next </Button>
 
                 </form>
