@@ -14,13 +14,13 @@ function Understanding() {
 
     //! Handle change
     const handleChange = (event) => {
-        event.preventDefault();
         const action = { type: "SET_UNDERSTANDING", payload: event.target.value };
         dispatch(action);
     };
 
     //! Next Step
-    const nextStep = () => {
+    const nextStep = (event) => {
+        event.preventDefault();
         if (understandingRating < 1 | understandingRating === '' | understandingRating > 10) {
             alert('Please enter a rating between 1 and 10');
         } else {

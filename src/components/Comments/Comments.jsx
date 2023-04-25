@@ -13,13 +13,13 @@ function Comments() {
 
     //! Handle change
     const handleChange = (event) => {
-        event.preventDefault();
         const action = { type: "SET_COMMENTS", payload: event.target.value };
         dispatch(action);
     };
 
     //! Next Step
-    const nextStep = () => {
+    const nextStep = (event) => {
+        event.preventDefault();
         history.push('/review')
     };
 

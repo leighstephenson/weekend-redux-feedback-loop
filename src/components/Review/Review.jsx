@@ -15,7 +15,8 @@ function Review() {
 
 
     //! Submit feedback
-    const submit = () => {
+    const submit = (event) => {
+        event.preventDefault();
         axios.post('/feedback', {
             feeling: feelingRating,
             understanding: understandingRating,

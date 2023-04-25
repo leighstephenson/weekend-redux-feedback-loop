@@ -1,11 +1,9 @@
-//TODO imports here
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Card, Typography } from '@mui/material';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Button from '@mui/material/Button';
 import ArrowRight from '@mui/icons-material/ArrowRight'
-
 
 
 function Feeling() {
@@ -15,20 +13,19 @@ function Feeling() {
 
     //! Handle change
     const handleChange = (event) => {
-        event.preventDefault();
         const action = { type: "SET_FEELING", payload: event.target.value };
         dispatch(action);
     };
 
     //! Next Step
-    const nextStep = () => {
+    const nextStep = (event) => {
+        event.preventDefault();
         if (feelingRating < 1 || feelingRating === '' || feelingRating > 10) {
             alert('Please enter a rating between 1 and 10');
         } else {
             history.push('/understanding')
         };
     };
-
 
     //! What Displays
     //feeling > understanding > support > comments > review
@@ -37,7 +34,6 @@ function Feeling() {
 
         <>
             <ProgressBar currentStep={0} />
-
 
             <Card sx={{
                 display: 'block',
@@ -70,10 +66,11 @@ function Feeling() {
                     <Button type="submit"
                         variant="contained"
                         endIcon={<ArrowRight />}
-                        sx={{':hover': {
-                            bgcolor: 'secondary.main',
-                        },
-                    }}
+                        sx={{
+                            ':hover': {
+                                bgcolor: 'secondary.main',
+                            },
+                        }}
                     >
                         Next </Button>
 

@@ -9,7 +9,7 @@ import Success from '../Success/Success';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
+//! Theme for MUI styling
 const theme = createTheme({
   palette: {
     primary: {

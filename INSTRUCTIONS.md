@@ -57,7 +57,7 @@ There will be 4 views for the form parts.
 
 ✅ When the submit button is clicked, save the submission in the database. The user should see a submission success page. 
 
-They can then click the button to take a new survey, which needs to reset all the data and go back to the first step.
+✅ They can then click the button to take a new survey, which needs to reset all the data and go back to the first step.
 
 ![understanding](wireframes/page-five.png)
 
@@ -71,7 +71,7 @@ They can then click the button to take a new survey, which needs to reset all th
 Allow the user to go back to a previous step and change their score. You still need to disallow empty values!
 
 ### STYLING
-Improve the styling of the app using Material-UI. This might include cards, snackbars, buttons, a nav bar, icons, and/or a theme. 
+✅ Improve the styling of the app using Material-UI. This might include cards, snackbars, buttons, a nav bar, icons, and/or a theme. 
 
 ### ADMIN SECTION
 

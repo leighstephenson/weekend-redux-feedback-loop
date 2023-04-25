@@ -14,13 +14,13 @@ function Support() {
 
     //! Handle change
     const handleChange = (event) => {
-        event.preventDefault();
         const action = { type: "SET_SUPPORT", payload: event.target.value };
         dispatch(action);
     };
 
     //! Next Step
-    const nextStep = () => {
+    const nextStep = (event) => {
+        event.preventDefault();
         if (supportRating < 1 || supportRating === '' || supportRating > 10) {
             alert('Please enter a rating between 1 and 10');
         } else {
