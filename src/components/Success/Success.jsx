@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import { Replay } from '@mui/icons-material';
-// import ReplayIcon from '@material-ui/icons/Replay';
+import ReplayIcon from '@material-ui/icons/Replay';
 
 function Success() {
 

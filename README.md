@@ -15,10 +15,6 @@ This web application was created to collect user input and store it on a databas
 ![success](./public/images/success.png)
 
 
-
-
-<!-- Add screenshots of each component -->
-
 ## Duration
 
 Multiple days of work over a 2 week period.
@@ -37,12 +33,12 @@ Multiple days of work over a 2 week period.
 
 1. Open the built-in terminal in your editor of choice. I use Visual Studio Code.
 2. Run `npm install nodemon --global`
-2. Run `npm install`
-2. Run `npm install redux@4 react-redux@7 redux-logger@3` 
-2. Run `npm install @mui/material @emotion/react @emotion/styled`
-2. Open a new tab of the terminal and enter `npm run server`
-3. In a different tab of the terminal, enter `npm run client`
-4. A browser window should open automatically.
+3. Run `npm install`
+4. Run `npm install redux@4 react-redux@7 redux-logger@3` 
+5. Run `npm install @mui/material @emotion/react @emotion/styled`
+6. Open a new tab of the terminal and enter `npm run server`
+7. In a different tab of the terminal, enter `npm run client`
+8. A browser window should open automatically.
 
 ## Usage
 
